@@ -1,0 +1,15 @@
+{
+  "name": "mq",
+  "version": "1.0.0",
+  "description": "Test for message Queue publisher and subscriber model",
+  "main": "index.js",
+  "scripts": {
+    "publish": "node publisher.js",
+    "consume": "node consumer.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "amqplib": "^0.10.3"
+  }
+}
