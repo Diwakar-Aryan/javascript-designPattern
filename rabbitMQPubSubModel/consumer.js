@@ -1,10 +1,9 @@
 const amqp = require("amqplib");
-
+require("dotenv").config();
 connect();
 async function connect() {
   try {
-    const amqpServer =
-      "amqps://dyvbimiz:0x9icLj2z3BTRL_PH0QOYQdjdPer4qb_@puffin.rmq2.cloudamqp.com/dyvbimiz";
+    const amqpServer = process.env.amqpURL;
     const connection = await amqp.connect(amqpServer);
     const channel = await connection.createChannel();
     await channel.assertQueue("jobs");
